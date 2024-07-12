@@ -3,34 +3,43 @@
 @use "sass:map";
 
 @function rem($sizeInPx) {
-    $remSize: math.div($sizeInPx, 16px);
-    @return #{$remSize}rem;
+  $remSize: math.div($sizeInPx, 16px);
+  @return #{$remSize}rem;
+}
+
+$fonts: (
+  "main": $font-main,
+  "secondary": $font-secondary,
+);
+
+@mixin font-family($type) {
+  font-family: map.get($fonts, $type);
 }
 
 @mixin text(
   $font-size: 16px,
   $font-weight: 400,
-  $color: black,
+  $color: $black-color,
   $line-height: initial,
+  $font-family: "main"
 ) {
-  font-weight: $font-weight;
-  color: $color;
-
   @if (string.index(#{$font-size}, "px")) {
     font-size: rem($font-size);
   } @else {
     font-size: $font-size;
   }
-
+  font-weight: $font-weight;
+  color: $color;
   @if (string.index(#{$line-height}, "px")) {
     line-height: rem($line-height);
   } @else {
     line-height: $line-height;
   }
+  @include font-family($font-family);
 }
 
 $breakpoints: (
-  "mobile": 768px,
+  "tablet": 768px,
   "desktop": 1024px,
   "hd": 1240px,
   "fullhd": 1440px,
@@ -46,4 +55,13 @@ $breakpoints: (
       @content;
     }
   }
+}
+
+// centered-flex
+
+@mixin flex($direction: row, $alignment: stretch, $justification: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $alignment;
+  justify-content: $justification;
 }

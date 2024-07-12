@@ -7,30 +7,56 @@
     <title>Manifest</title>
   </head>
   <body>
-    <header>
-      <a href="#"><img src="assets/logo.svg" alt="logo" /></a>
-      <div>
+    <header class="header">
+      <div class="header__navigation">
+        <a class="header__logo" href="#"
+          ><img src="assets/logo.svg" alt="logo"
+        /></a>
         <nav>
-          <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">works</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">contact</a></li>
+          <ul class="header__nav-list">
+            <li class="header__list-item">
+              <a class="header__nav-link" href="#">home</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__nav-link" href="#">about</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__nav-link" href="#">works</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__nav-link" href="#">blog</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__nav-link" href="#">contact</a>
+            </li>
           </ul>
         </nav>
-        <img src="assets/icon-search.svg" alt="search" />
-        <img src="assets/icon-hamburger.svg" alt="menu" />
+        <div class="header__nav-bar">
+          <img
+            class="header__search"
+            src="assets/icon-search.svg"
+            alt="search"
+          />
+          <img
+            class="header__burger"
+            src="assets/icon-hamburger.svg"
+            alt="menu"
+          />
+        </div>
       </div>
     </header>
 
-    <main>
-      <section>
-        <h1>Manifest is a newborn theme. Clean, simple and fast.</h1>
-        <img src="assets/bg-image.png" alt="hero image" />
-      </section>
+    <main class="main">
+      <div class="hero">
+        <section class="hero__content">
+          <h1 class="hero__heading">
+            Manifest is a newborn theme. <br />
+            Clean, simple and fast.
+          </h1>
+        </section>
+      </div>
 
-      <section>
+      <section class="blog">
         <h2>Blog</h2>
         <article>
           <img src="assets/blog-image-1.png" alt="blog image 01" />

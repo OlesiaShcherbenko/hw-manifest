@@ -1,0 +1,41 @@
+.header {
+  @extend .container;
+  // @include flex($direction: column, $alignment: center);
+  // position: relative;
+  padding: 40px 0;
+  border: 1px solid red;
+
+  &__logo {
+  }
+
+  &__navigation {
+    border: 1px solid red;
+    @include flex($alignment: center, $justification: space-between);
+  }
+
+  &__nav-list {
+    @include flex($alignment: center, $justification: flex-end);
+    gap: 24px;
+    
+  }
+
+  &__list-item {
+    @include text(14px, 400, $black-color, 16px);
+    list-style: none;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: $black-color;
+    text-transform: uppercase;
+  }
+
+  &__nav-bar {
+  }
+
+  &__search {
+  }
+
+  &__burger {
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+    max-width: $container-width;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.container-full {
+    max-width: $container-width-full;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid green;
+}
