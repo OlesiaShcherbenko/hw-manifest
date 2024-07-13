@@ -57,7 +57,7 @@ $breakpoints: (
   }
 }
 
-// centered-flex
+// FLEX
 
 @mixin flex($direction: row, $alignment: stretch, $justification: flex-start) {
   display: flex;

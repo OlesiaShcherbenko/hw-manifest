@@ -18,26 +18,22 @@ textarea {
   font-family: inherit;
 }
 
-.container, .hero__content, .header {
+.container, .blog, .hero__content, .header {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .container-full {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid green;
 }
 
 .header {
   padding: 40px 0;
-  border: 1px solid red;
 }
 .header__navigation {
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -99,7 +95,6 @@ textarea {
   color: #000000;
   line-height: 3.125rem;
   font-family: "Red Hat Display", sans-serif;
-  margin-top: 70px;
 }
 @media screen and (min-width: 768px) {
   .hero__heading {
@@ -108,7 +103,6 @@ textarea {
     color: #000000;
     line-height: 3.125rem;
     font-family: "Lato", sans-serif;
-    margin-top: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -118,8 +112,87 @@ textarea {
     color: #000000;
     line-height: 4rem;
     font-family: "Lato", sans-serif;
-    margin-top: 100px;
   }
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.blog__heading {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 4rem;
+  font-family: "Red Hat Display", sans-serif;
+}
+.blog__article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.blog__article-content-wrap {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+.blog__article-content-wrap-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.blog__article-content {
+  max-width: 450px;
+  height: auto;
+}
+.blog__article-category {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #7b7b7b;
+  line-height: 1.625rem;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 30px;
+  letter-spacing: 1.6px;
+}
+.blog__article-title {
+  font-size: 1.4375rem;
+  font-weight: 500;
+  color: #000000;
+  line-height: 2.375rem;
+  font-family: "Red Hat Display", sans-serif;
+  letter-spacing: 1.6px;
+  margin-bottom: 15px;
+}
+.blog__article-meta {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #7b7b7b;
+  line-height: 1.625rem;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.6px;
+  margin-bottom: 50px;
+}
+.blog__wrap-discription {
+  position: relative;
+  margin-bottom: 10px;
+}
+.blog__article-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #565656;
+  line-height: 1.625rem;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.8px;
+}
+.blog__article-arrow {
+  position: absolute;
+  bottom: 6px;
+  left: 190px;
 }
 
 /*# sourceMappingURL=main.css.map */

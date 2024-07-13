@@ -1,3 +1,80 @@
 .blog {
+  @extend .container;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+//   border: 1px solid red;
+
+  &__heading {
+    @include text(48px, 400, $black-color, 64px, "secondary");
+  }
+
+  &__article {
+    @include flex($alignment: center);
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    //   max-width: 100%;
+    //   height: auto;
+    //   object-fit: cover;
+  }
+
+  &__article-content-wrap {
+    // border: 1px solid green;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+
+  &__article-content-wrap-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__article-content {
+    max-width: 450px;
+    height: auto;
+    // border: 1px solid red;
+  }
+
+  &__article-category {
+    @include text(16px, 400, $placeholder-color, 26px);
+    margin-bottom: 30px;
+    letter-spacing: 1.6px;
+  }
+
+  &__article-title {
+    @include text(23px, 500, $black-color, 38px, "secondary");
+    letter-spacing: 1.6px;
+    margin-bottom: 15px;
+  }
+
+  &__article-meta {
+    @include text(16px, 400, $placeholder-color, 26px);
+    letter-spacing: 1.6px;
+    margin-bottom: 50px;
+  }
+
+  &__wrap-discription {
+    position: relative;
+    margin-bottom: 10px;
+    // border: 1px solid red;
+  }
+
+  &__article-description {
+    @include text(16px, 400, $main-text-color, 26px);
+    letter-spacing: 0.8px;
     
+  }
+
+  &__article-arrow {
+    position: absolute;
+    bottom: 6px;
+    left: 190px;
+    
+  }
 }

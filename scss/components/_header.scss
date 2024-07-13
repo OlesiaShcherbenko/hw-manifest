@@ -2,21 +2,20 @@
   @extend .container;
   // @include flex($direction: column, $alignment: center);
   // position: relative;
+  // border: 1px solid red;
   padding: 40px 0;
-  border: 1px solid red;
 
   &__logo {
   }
 
   &__navigation {
-    border: 1px solid red;
+    // border: 1px solid red;
     @include flex($alignment: center, $justification: space-between);
   }
 
   &__nav-list {
     @include flex($alignment: center, $justification: flex-end);
     gap: 24px;
-    
   }
 
   &__list-item {
