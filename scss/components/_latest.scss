@@ -1,0 +1,60 @@
+.latest {
+  @extend .container;
+//   border: 1px solid red;
+  margin-bottom: 90px;
+  
+
+  &__heading {
+    @include flex($alignment: center, $justification: space-between);
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @include text(28px, 600, $black-color, 46px, "secondary");
+    letter-spacing: 1.6px;
+  }
+
+  &__link {
+    @include text(16px, 400, $placeholder-color, 26px);
+    letter-spacing: 1.6px;
+    text-decoration: none;
+  }
+
+  &__link-arrow {
+    margin-left: 20px;
+  }
+
+  &__cards {
+    @include flex();
+    column-gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    // border: 1px solid red;
+    max-width: 370px;
+    min-height: 500px;
+    flex: 1;
+  }
+
+  &__meta {
+    @include flex($alignment: center, $justification: space-between);
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  &__meta-category, &__meta-date {
+    @include text(12px, 400, $placeholder-color, 19px);
+  }
+
+  &__card-title {
+    @include text(22px, 500, $black-color, 36px, "secondary");
+    letter-spacing: 1.6px;
+    margin-bottom: 20px;
+  }
+  
+  &__card-discription {
+    @include text(16px, 400, $main-text-color, 26px);
+    letter-spacing: 0.8px;
+  }
+}

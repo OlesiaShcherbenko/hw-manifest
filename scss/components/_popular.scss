@@ -1,0 +1,70 @@
+.popular {
+  @extend .container;
+  @include flex($direction: column, $alignment: center, $justification: center);
+//   border: 1px solid red;
+  margin-bottom: 90px;
+
+  &__heading {
+    @include flex($alignment: center, $justification: space-between);
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @include text(28px, 600, $black-color, 46px, "secondary");
+    letter-spacing: 1.6px;
+  }
+
+  &__link {
+    @include text(16px, 400, $placeholder-color, 26px);
+    letter-spacing: 1.6px;
+    text-decoration: none;
+  }
+
+  &__link-arrow {
+    margin-left: 20px;
+  }
+
+  &__cards {
+    @include flex($alignment: center, $justification: center);
+    column-gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  &__card {
+    // border: 1px solid red;
+    max-width: 570px;
+    min-height: 500px;
+    flex: 1;
+  }
+
+  &__meta {
+    @include flex($alignment: center, $justification: space-between);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__meta-category,
+  &__meta-date {
+    @include text(12px, 400, $placeholder-color, 19px);
+  }
+
+  &__card-title {
+    @include text(24px, 500, $black-color, 40px, "secondary");
+    letter-spacing: 1.6px;
+    margin-bottom: 20px;
+  }
+
+  &__card-discription {
+    @include text(16px, 400, $main-text-color, 26px);
+    letter-spacing: 0.8px;
+  }
+
+  &__button {
+    text-decoration: none;
+    padding: 10px 45px;
+    background-color: $main-text-color;
+    @include text(16px, 700, $white-color, 26px);
+    letter-spacing: 1.6px;
+  }
+}
